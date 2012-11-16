@@ -3,6 +3,13 @@ Mongoid Spacial
 
 A Mongoid Extention that simplifies and adds support for MongoDB Geo Spacial Calculations.
 
+Annotation to this fork
+-----------------------
+
+This fork was only made to deploy the new code (from the original author) under the new name 
+sig_mongoid_spacial to rubygems.org. The reason for this workaround is the deprecation warning
+in rails 3.2.
+
 Quick Start
 -----------
 Add mongoid_spacial to your Gemfile:
