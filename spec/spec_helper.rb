@@ -7,9 +7,10 @@ $LOAD_PATH.unshift(MODELS)
 $LOAD_PATH.unshift(SUPPORT)
 
 require "mongoid"
-require "mocha"
 require "rspec"
 require "mongoid_spacial"
+require "mocha/setup"
+require "mocha/api"
 
 LOGGER = Logger.new($stdout)
 
@@ -19,8 +20,7 @@ end
 
 Mongoid.configure do |config|
   name = "mongoid_spacial_test"
-  config.master = Mongo::Connection.new.db(name)
-  config.logger = nil
+  config.connect_to(name)
   config.allow_dynamic_fields = true
 end
 
